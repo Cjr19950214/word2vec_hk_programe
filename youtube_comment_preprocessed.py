@@ -17,7 +17,7 @@ def remove_username(x,userlist):
     for i in userlist:
         if str(i) in x[:26] and x.index(str(i))==0:
             flag = True
-            new_comment = x.replace(i,'Username',1) #替换1次
+            new_comment = x.replace(str(i),'Username',1) #替换1次
     if flag == True:
         return new_comment
     else:
