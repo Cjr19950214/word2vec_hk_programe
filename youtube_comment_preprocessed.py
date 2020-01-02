@@ -37,9 +37,11 @@ def remove_eng(x):
         elif i.isspace():
             spaceCount +=1
     num_eng = intCount + engCount + spaceCount
-    if (num_eng/comment_length) >= 0.85:
+    if num_eng >= 35:
+        return 'english comment'
+    elif (num_eng/comment_length) >= 0.85:
         if comment_length>=15:
-            return 'English comment'
+            return 'english comment'
         else:
             return x
     else:
