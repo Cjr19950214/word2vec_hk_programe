@@ -4,7 +4,7 @@ from langconv import *
 import pandas as pd
 import re
 import glob
-SaveFile_Path =  r'D:\veronbenny_data'       #拼接后要保存的文件路径
+SaveFile_Path =  r'D:\youtube_data\7.城寨'       #拼接后要保存的文件路径
 csv_list=[i for i in glob.glob('*.{}'.format('csv'))]   #加载当前文件里所有后缀为csv的文件。
 
 def simple2tradition(line):
@@ -77,7 +77,14 @@ def comment_preprocessed(csv_list,SaveFile_Path):
             data.to_csv(SaveFile_Path + '\\' + 'modified_'+csv_file, encoding="utf_8_sig", index=False, header=False)
         else:
             os.makedirs(SaveFile_Path)
-            data.to_csv(SaveFile_Path + '\\' + csv_file, encoding="utf_8_sig", index=False, header=False)
+            data.to_csv(SaveFile_Path + '\\' +  'modified_'+csv_file, encoding="utf_8_sig", index=False, header=False)
+
+        # try:
+        #     os.mkdir("C:\\test\\aaa")
+        # except Exception as e:
+        #     print(e)
+        # try:
+        #     os.makedirs("C:\\tests\\bbb")
 
 
 comment_preprocessed(csv_list,SaveFile_Path)
