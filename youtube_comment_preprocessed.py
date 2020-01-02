@@ -15,7 +15,7 @@ def simple2tradition(line):
 def remove_username(x,userlist):
     flag=False
     for i in userlist:
-        if i in x[:26] and x.index(i)==0:
+        if str(i) in x[:26] and x.index(str(i))==0:
             flag = True
             new_comment = x.replace(i,'Username',1) #替换1次
     if flag == True:
