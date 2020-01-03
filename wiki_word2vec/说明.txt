@@ -11,4 +11,4 @@ python process.py zhwiki-latest-pages-articles-multistream.xml.bz2 wiki_zh.txt
    
 4.预览下这个wiki_zh.txt 不能直接打开，需要用read_file.py 来看，也是在cmd命令行中输入：   python read_file.py
 
-5.进行切词
+5.进行切词 运行jieba_cut.py 来进行切词 会生成一个wiki.zh.seg.txt 文件
