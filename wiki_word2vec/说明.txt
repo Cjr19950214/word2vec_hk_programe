@@ -1,0 +1,14 @@
+referenced: 
+https://www.cnblogs.com/gaofighting/p/9105614.html
+https://blog.csdn.net/Daycym/article/details/88993828
+
+1.在此处下载wiki最新的语料库corpus：https://dumps.wikimedia.org/zhwiki/latest/    →《zhwiki-latest-pages-articles-multistream.xml.bz2》
+
+2.要将压缩文件解压  将process.py 丢到 wiki语料压缩文件所在目录下 并开启cmd 命令行，输入：
+python process.py zhwiki-latest-pages-articles-multistream.xml.bz2 wiki_zh.txt
+
+3.要等接近二十分钟才能解压完成，并生成wiki_zh.txt
+   
+4.预览下这个wiki_zh.txt 不能直接打开，需要用read_file.py 来看，也是在cmd命令行中输入：   python read_file.py
+
+5.进行切词
