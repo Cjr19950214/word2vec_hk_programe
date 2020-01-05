@@ -6,3 +6,7 @@ referenced:https://github.com/skydark/nstools/tree/master/zhtools 用于繁简�
 # 2.youtube_comment_preprocessed.py
 1.首先要将这个程序放在“爬取评论后所存储的文件夹里”<br/>
 2.要将程序里的SaveFile_Path =  r'D:\xxxxxx_data'  的名字进行修改（如果没有xxxxx_data文件夹要先进行创建）
+3.这个程序处理的是单个文件夹，不会循环
+
+# 3.youtube_comment_directory_preprocessed.py
+1.能循环读取多个文件夹里的csv文件
