@@ -34,7 +34,7 @@ def remove_eng(x):
     intCount = 0  # 用来记录列表中的int元素个数
     engCount = 0  # 记录str元素个数
     spaceCount = 0
-    comment_length = len(x)  # 整个comment长度
+    comment_length = len(x)+1  # 整个comment长度 +1是为了防止之后除的时候分母不为0
     # 使用for循环遍历字符串，每次循环判断当前获取的元素的类型，并给对应计数器计数
     for i in x:
         if i.isdigit():  # 判断i是不是int
@@ -65,6 +65,7 @@ for dir in dir_list:
     for csv_file in csv_list:
         data = pd.read_csv(csv_file)
         data.dropna(subset=['comment'], inplace=True)  # 清除空的评论
+        data['comment'] = data['comment'].astype(str) # 转为字符串形式
         # 去除评论字符串两边的空格
         data['comment'] = data['comment'].str.strip()
         # 简体转繁体
