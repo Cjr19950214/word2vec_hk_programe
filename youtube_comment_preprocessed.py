@@ -55,6 +55,7 @@ def comment_preprocessed(csv_list,SaveFile_Path):
     for csv_file in csv_list:
         data = pd.read_csv(csv_file)
         data.dropna(subset=['comment'], inplace=True)  # 清除空的评论
+        data['comment'] = data['comment'].astype(str) # 转换成字符串格式
         # 去除评论字符串两边的空格
         data['comment'] = data['comment'].str.strip()
         # 简体转繁体
