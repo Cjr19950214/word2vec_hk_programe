@@ -1,6 +1,7 @@
 referenced: 
 https://www.cnblogs.com/gaofighting/p/9105614.html
 https://blog.csdn.net/Daycym/article/details/88993828
+我文件放在  D:\wikiextractor-master\wikiextractor-master
 
 1.在此处下载wiki最新的语料库corpus：https://dumps.wikimedia.org/zhwiki/latest/    →《zhwiki-latest-pages-articles-multistream.xml.bz2》
 
