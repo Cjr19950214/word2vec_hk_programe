@@ -31,26 +31,21 @@ def remove_username(x, userlist):
 
 
 def remove_eng(x):
-    intCount = 0  # 用来记录列表中的int元素个数
-    engCount = 0  # 记录str元素个数
+    intCount = 0  #用来记录列表中的int元素个数
+    engCount = 0 #记录str元素个数
     spaceCount = 0
-    comment_length = len(x)+1  # 整个comment长度 +1是为了防止之后除的时候分母不为0
+    comment_length = len(x)+1  #整个comment长度
     # 使用for循环遍历字符串，每次循环判断当前获取的元素的类型，并给对应计数器计数
     for i in x:
-        if i.isdigit():  # 判断i是不是int
+        if i.isdigit(): #判断i是不是int
             intCount += 1
-        elif i in string.ascii_letters:  # 判断i是不是英文字符
+        elif i in string.ascii_letters: #判断i是不是英文字符
             engCount += 1
         elif i.isspace():
-            spaceCount += 1
+            spaceCount +=1
     num_eng = intCount + engCount + spaceCount
-    if num_eng >= 35:
+    if (num_eng/comment_length) >= 0.85 and comment_length>=20:
         return 'english comment'
-    elif (num_eng / comment_length) >= 0.85:
-        if comment_length >= 15:
-            return 'english comment'
-        else:
-            return x
     else:
         return x
 
